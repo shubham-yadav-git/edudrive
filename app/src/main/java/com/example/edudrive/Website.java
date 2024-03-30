@@ -17,6 +17,14 @@ public class Website extends AppCompatActivity {
         // Enable JavaScript (if required)
         WebSettings webSettings = webView.getSettings();
         webSettings.setJavaScriptEnabled(true);
+        // Enable zoom controls
+        webSettings.setBuiltInZoomControls(true);
+        webSettings.setDisplayZoomControls(false); // Hide the zoom controls (optional)
+
+        // Enable pinch-to-zoom
+        webSettings.setSupportZoom(true);
+        webSettings.setUseWideViewPort(true);
+//        webSettings.setLoadWithOverviewMode(true);
         // Set a custom WebViewClient to handle URL loading within the WebView
 //        webView.setWebViewClient(new WebViewClient() {
 //            @Override
