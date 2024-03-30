@@ -4,11 +4,7 @@ import android.content.Intent;
 import android.os.Bundle;
 import android.webkit.WebSettings;
 import android.webkit.WebView;
-import android.webkit.WebViewClient;
-
 import androidx.appcompat.app.AppCompatActivity;
-
-import java.util.Objects;
 
 public class Website extends AppCompatActivity {
     @Override
@@ -22,13 +18,13 @@ public class Website extends AppCompatActivity {
         WebSettings webSettings = webView.getSettings();
         webSettings.setJavaScriptEnabled(true);
         // Set a custom WebViewClient to handle URL loading within the WebView
-        webView.setWebViewClient(new WebViewClient() {
-            @Override
-            public boolean shouldOverrideUrlLoading(WebView view, String url) {
-                // Return false to allow the WebView to handle the URL loading
-                return false;
-            }
-        });
+//        webView.setWebViewClient(new WebViewClient() {
+//            @Override
+//            public boolean shouldOverrideUrlLoading(WebView view, String url) {
+//                // Return false to allow the WebView to handle the URL loading
+//                return false;
+//            }
+//        });
         // Load a URL
 //        webView.loadUrl("https://docs.google.com/document/d/e/2PACX-1vSqcTFVnaTaaPsV0LJgPnIpyJMjMthPSH3Yss3duzwi6d2K6YfnNNtTj4nF0WWSUmBKgI9HZxQFVzMK/pub");
         Intent intent = getIntent();

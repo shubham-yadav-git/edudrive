@@ -22,6 +22,8 @@ public class MainActivity extends AppCompatActivity {
         CardView home_work_card = findViewById(R.id.card_homework);
         CardView drive_card = findViewById(R.id.card_drive);
         Button btnWebsite = findViewById(R.id.websiteOpen);
+        CardView cardViewAvResources = findViewById(R.id.card_av_resources);
+        CardView cardClassLogs = findViewById(R.id.card_class_logs);
         drive_card.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
@@ -47,6 +49,41 @@ public class MainActivity extends AppCompatActivity {
         });
 
         home_work_card.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                // Create an Intent to start SecondActivity
+                Intent intent = new Intent(MainActivity.this, Website.class);
+
+                // Optionally, you can pass data to SecondActivity using putExtra
+                intent.putExtra("key", " <iframe src=\"https://rb.gy/78s8w\"frameborder=\"0\" \n" +
+                        "            marginheight=\"0\" \n" +
+                        "            marginwidth=\"0\" \n" +
+                        "            width=\"100%\" \n" +
+                        "            height=\"750\" \n" +
+                        "            scrolling=\"auto\"></iframe>\n" +
+                        "            <h3>&ensp;⬆\uFE0F<mark>##</mark></h3>");
+
+                // Start SecondActivity
+                startActivity(intent);
+            }
+        });
+
+        cardViewAvResources.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                // Create an Intent to start SecondActivity
+                Intent intent = new Intent(MainActivity.this, Website.class);
+
+                // Optionally, you can pass data to SecondActivity using putExtra
+                intent.putExtra("key", "<iframe src=\"https://rb.gy/3x2sl?widget=true&amp;headers=false\" width=\"545\" height=\"750\" style=\"border:1px\"></iframe>\n" +
+                        "            <h3>&ensp;⬆\uFE0F<mark>Switch from here.</mark></h3>");
+
+                // Start SecondActivity
+                startActivity(intent);
+            }
+        });
+
+        cardClassLogs.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
                 // Create an Intent to start SecondActivity
